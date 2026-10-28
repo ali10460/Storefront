@@ -1,0 +1,88 @@
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+virtualenv/
+.python-version
+
+# Pipenv
+# Keep Pipfile and Pipfile.lock tracked in Git
+# Do not ignore Pipfile or Pipfile.lock
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Django migrations
+# Keep migrations in Git
+# Do not ignore migrations directories
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Django static files
+staticfiles/
+static_root/
+media/
+
+# Uploaded files
+uploads/
+
+# Coverage and testing
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+test-results/
+
+# Type checking and linting
+.mypy_cache/
+.dmypy.json
+.pyre/
+.ruff_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Documentation builds
+docs/_build/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# Deployment and server files
+*.pid
+gunicorn.log
