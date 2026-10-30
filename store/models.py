@@ -2,12 +2,17 @@ from django.db import models
 
 # Create your models here.
 
+
 class Promotion(models.Model):
     description = models.CharField(max_length=255)
     discount = models.FloatField()
 
+
 class Collection(models.Model):
     title = models.CharField(max_length=255)
+    featured_product = models.ForeignKey(
+        "Product", on_delete=models.SET_NULL, null=True, blank=True, related_name='+'
+    )
 
 
 class Product(models.Model):
@@ -55,6 +60,7 @@ class Order(models.Model):
         max_length=1, choices=PAYMENT_CHOICES, default=PAYMENT_PENDING
     )
     customer = models.ForeignKey(Customer, on_delete=models.PROTECT)
+
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.PROTECT)
